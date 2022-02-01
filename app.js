@@ -1,6 +1,6 @@
 let scrollPosition = 0;
 let scrollAmount = 320;
-let maxScroll = 800;
+let maxScroll = 780;
 
 const scroll = document.querySelector('.scroll');
 const projectList = document.querySelector('.project-container');
