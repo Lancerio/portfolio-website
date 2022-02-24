@@ -39,7 +39,7 @@ h1 {
     font-size: 2rem;
     color: var(--secondary-gray);
     animation: animate 1s ease-out forwards;
-    animation-delay: 500ms;
+    animation-delay: 200ms;
     opacity: 0;
 }
 
@@ -48,7 +48,7 @@ h1 {
     margin-top: 0.25rem;
     margin-left: 0.25rem;
     animation: animate 1s ease-out forwards;
-    animation-delay: 1000ms;
+    animation-delay: 400ms;
     opacity: 0;
 }
 
@@ -67,18 +67,9 @@ hr {
 }
 
 /* Projects Section */
-.projects {
+h3 {
     animation: animate 1s ease-in-out forwards;
-    animation-delay: 1500ms;
-    opacity: 0;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: animate 1.5s ease-in-out forwards;
-    animation-delay: 2000ms;
+    animation-delay: 800ms;
     opacity: 0;
 }
 
@@ -95,10 +86,10 @@ hr {
     padding: 1rem 0.5rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1.5rem;
     left: 0;
-    transition: all 0.5s ease-in-out;
+    /* transition: all 0.5s ease-in-out; */
     flex-wrap: wrap;
 }
 
@@ -117,7 +108,9 @@ hr {
     align-items: center;
     text-align: center;
     box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s;
+    opacity: 0;
+    animation: animate 1s ease forwards;
+    animation-delay: calc(var(--order) * 500ms);
 }
 
 .project-wrapper:hover {
