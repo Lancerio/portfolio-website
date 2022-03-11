@@ -5,18 +5,16 @@
 }
 
 :root {
-    --main-color: #374785;
-    --secondary-color: #24305E;
-    --accent-color: #A8D0E6;
-    --main-gray: #202124;
-    --secondary-gray: #5f6368;
+    --main-color: #362326;
+    --secondary-color: #ef4d3e; 
+    --background: #fffdfc;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     padding: 2.5rem 5rem;
-    color: var(--main-gray);
-    background-color: #dfe6e9;
+    color: var(--main-color);
+    background-color: var(--background);
 }
 
 /* About Section */
@@ -37,14 +35,13 @@ h1 {
 .about-big-text {
     margin-top: -1rem;
     font-size: 2rem;
-    color: var(--secondary-gray);
     animation: animate 1s ease-out forwards;
     animation-delay: 200ms;
     opacity: 0;
 }
 
 .about-text {
-    color:var(--secondary-gray);
+    font-size: 0.80rem;
     margin-top: 0.25rem;
     margin-left: 0.25rem;
     animation: animate 1s ease-out forwards;
@@ -53,12 +50,11 @@ h1 {
 }
 
 .about-name {
-    color: var(--main-gray);
     font-weight: 700;
 }
 
 hr {
-    color: #ccc;
+    color: var(--secondary-color);
     margin: 1.75rem auto;
     width: 95%;
     opacity: 0;
@@ -93,11 +89,10 @@ h3 {
 }
 
 .project-wrapper {
-    color: var(--secondary-gray);
     font-size: 0.80rem;
     position: relative;
     padding: 1rem;
-    background-color: white;
+    background-color: #fff;
     width: 200px;
     height: 200px;
     border-radius: 10px;
@@ -106,10 +101,11 @@ h3 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.10);
     opacity: 0;
     animation: animate 1s ease forwards;
     animation-delay: calc(var(--order) * 500ms);
+    z-index: 1;
 }
 
 .project-name {
@@ -120,35 +116,15 @@ h3 {
     letter-spacing: 1px;
 }
 
-.project-desc {
-    color: var(--secondary-gray);
-}
-
 .project-year {
     position: absolute;
     bottom: 10px;
     font-size: 0.60rem;
     padding: 0.25rem 0.75rem;
     letter-spacing: 2px;
-    background-color: var(--main-color);
-    color: white;
+    background-color: var(--secondary-color);
+    color: #fff;
     border-radius: 99px;
-}
-
-.footer {
-    color:white;
-    padding: 5px;
-    font-size: .60rem;
-    letter-spacing: 1px;
-    text-align: center;
-    animation: footer 1s ease-in forwards;
-    animation-delay: 2000ms;
-    opacity: 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--main-color);
 }
 
 /* Keyframes */
@@ -175,70 +151,19 @@ h3 {
 }
 
 /* Media Queries */
-@media only screen 
-and (max-width: 812px) {
+@media only screen and (max-width: 812px) {
     body {
         padding: 1.5rem;
     }
 
-    /* About Section */
-    .about {
-        margin-top: 1.5rem;
-        font-size: 1rem;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .about-big-text {
-        margin-top: 0;
-        margin-bottom: 0.25rem;
-        font-size: 1rem;
-    }
-
-    .about-text {
-        font-size: .90rem;
-    }
-
-    hr {
-        margin: 1rem 0;
-    }
-
-    /* Project Section */
-    h3 {
-        margin-bottom: 1rem;
-    }
-
-    button {
-        display: none;
-    }
-
-    .scroll {
-        overflow: visible;
-        margin: 0 auto;
-    }
-
-    .project-container {
-        flex-wrap: wrap;
-        position: static;
-        justify-content: center;
-        align-content: flex-start;
-        height: 100%;
-    }
-
     .project-wrapper {
-        padding: 1.25rem;
         height: 150px;
         width: 150px;
     }
 
     .project-name,
-    .project-desc {
-        font-size: 0.70rem;
-    }
-
+    .project-desc,
     .project-year {
-        font-size: 0.5rem;
+        font-size: 0.70rem;
     }
 }
